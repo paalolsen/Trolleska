@@ -1,0 +1,196 @@
+<!--
+<div class="featured_content">
+  <div class="container">
+      <div class="row text-center feature_grid2 ">
+        <img src="../../img/seko.jpg" >
+      </div>
+    -->  
+
+<div class="paddingFromMenu maxWidth" style="background-image: url('../img/3.png');height: 250px ;background-size:cover;">
+    <div class="container">
+        <div class="row margin-bottom-10">
+            <div class="col-md-4 col-sm-12 pull-right">
+                <!-- <div class="servive-block servive-block-grey">         
+                        <i class="icon-2x color-light fa fa-gift"></i> -->
+                <div class="servive-block servive-block-yellow">       
+                        <i class="icon-2x color-light fa fa-users"></i>
+                <!-- <div class="servive-block servive-block-purple">       
+                        <i class="icon-2x color-light fa fa-gift"></i>-->
+                <!-- <div class="servive-block rounded servive-block-aqua"> 
+                        <i class="icon-2x color-light fa fa-taxi"></i> -->
+                <!-- <div class="servive-block servive-block-dark-blue">            
+                    <i class="icon-2x color-light fa fa-gift"></i> -->
+                    <h2 class="heading-md">Ansatte</h2>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div ng-controller="AnsatteController">
+    
+    
+    
+    <div class="container feature_grid2 ">
+        <!--<div class="row">-->
+        <!--<h2 style="padding-bottom:10px;"><span class="label label-info">Kontor</span></h2>-->
+        <div class="row">
+            
+            <div class="input-group stylish-input-group" style="padding: 5px 15px 20px 15px;">
+                <span class="input-group-addon">Filter: </span>
+                <input type="text" class="form-control"  placeholder="Search" ng-model="query">
+       
+            </div>  
+            
+            <div ng-repeat="ansatt in ansatte | orderObjectBy:'nivaa':false | filter:query">                
+                
+                <!-- ################################# -->
+                <!-- ##           REPEAT START      ## -->
+                <!-- ################################# -->
+                
+                <!-- Breaking ROW-class on corretct COL-*-* --> 
+                <!--<div ng-if="$index % 1 == 0" class="clearfix visible-xs"></div>-->  <!-- 1 her trengs egentlig ikke. Altså 1*12 = 12 -->
+                <div ng-if="$index % 2 == 0" class="clearfix visible-sm"></div>         <!-- Fordi det er 2 forekomster av col-sm-6. Altså 2*6 = 12 -->            
+                <div ng-if="$index % 3 == 0" class="clearfix visible-md"></div>         <!-- Fordi det er 3 forekomster av col-md-4. Altså 3*4 = 12 --> 
+                <div ng-if="$index % 4 == 0" class="clearfix visible-lg"></div>         <!-- Fordi det er 4 forekomster av col-lg-3. Altså 4*3 = 12 -->                 
+                
+                <!--
+                <div ng-show="CreateHeader(ansatt.nivaa)">
+                    
+                    <div class="clearfix visible-xs"></div>
+                    <div class="clearfix visible-sm"></div>                   
+                    <div class="clearfix visible-md"></div>       
+                    <div class="clearfix visible-lg"></div>  
+                    
+                    <div class="col-md-12">
+                        <h2 style="padding-bottom:10px;"><span class="label label-info">{{ansatt.avdeling}}</span></h2> 
+                    </div>
+                </div>
+-->
+                
+                <div class="col-sm-6 col-md-4 col-lg-3 ">                   
+                    <div class="panel panel-primary" >
+                        <!--<div class="panel-heading" style="margin:0;" ng-class="{'panel-heading-nivaa1': ansatt.nivaa == 1, 'panel-heading-nivaa2': ansatt.nivaa == 2 }">-->
+                        <div class="panel-heading panel-heading-nivaa{{ansatt.nivaa}} " style="margin:0;">
+                            <!--<h5 style="color:white; text-align: center; width: 100%">
+                                {{ansatt.fornavn}} {{ansatt.etternavn}}
+                                <span class="label label-info" style="align: right">{{ansatt.avdeling}}</span>
+                            </h5>-->
+                            
+                            <div>
+                                <table style="width:100%" >
+                                    <tr>
+                                        <td>{{ansatt.fornavn}} {{ansatt.etternavn}}</td>
+                                        <td style="text-align: right">
+                                            <span style="" class="label label-info">{{ansatt.avdeling}}</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                       
+                                
+                                <!--<h5 style="border:1px solid black;color:white; text-align: left;"> {{ansatt.fornavn}} {{ansatt.etternavn}}</h5>
+                                <h5 style="border:1px solid black;text-align: right;"><span class="label label-info">{{ansatt.avdeling}}</span></h5>-->
+                                
+                            </div>
+                        </div>
+                        <div class="panel-tag" align="center">
+                           <!-- <div class="row">
+                                <div class="col-md-3" style=";width:100%">-->
+                                    <div class="table-responsive" style="width:100%">
+                                        <table class="table table-striped"> 
+                                            <tr>                                                
+                                                <td style="display:table-cell; vertical-align:middle; text-align:center; width: 50px"  >
+                                                    <div ng-show="ansatt.bilde.length > 1">
+                                                        <img src="../img/Ansatte/{{ansatt.bilde}} " class="shadow"/>
+                                                    </div>
+                                                    <div ng-show="ansatt.bilde.length < 1" class="shadow">
+                                                        <span class="glyphicon glyphicon glyphicon-user" style="font-size:4.5em;padding-top:10px;"></span>
+                                                    </div>
+                                                </td>                                                    
+                                                <td>
+                                                    <table width="100%">
+                                                        <tr>
+                                                            <td colspan="2"><h5>{{ansatt.stilling}}</h5></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td ng-if="ansatt.mail.length > 1"><a href="mailto:{{ansatt.mail}}"><span class="glyphicon glyphicon-envelope" style="font-size:1.5em"></span></a></td>
+                                                            <td style="padding-left:10px;">{{ansatt.mail}}</td>
+                                                            
+                                                        </tr>
+                                                        <tr>             
+                                                            <td ng-if="ansatt.mail.length > 1"><a href="tel:{{ansatt.telefon}}"><span class="glyphicon glyphicon-earphone" style="font-size:1.5em"></span></a></td>
+                                                            <td style="padding-left:10px;">{{ansatt.telefon}}</td>                                                            
+                                                        </tr>   
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <!--
+                                            <tr>
+                                                <td colspan="2"><strong>Rolle:</strong>{{ansatt.rolle}}</td>
+                                            </tr>
+--> 
+                                            <!--
+                                            <tr>
+                                                <td rowspan="3" style="display:table-cell; vertical-align:middle; text-align:center">
+                                                    <div ng-show="ansatt.bilde.length > 1">
+                                                        <img src="../img/Ansatte/{{ansatt.bilde}} " />
+                                                    </div>
+                                                    <div ng-show="ansatt.bilde.length < 1">
+                                                        <span class="glyphicon glyphicon glyphicon-user" style="font-size:4em;padding-top:10px;"></span>
+                                                    </div>
+                                                </td>                                                                            
+                                             
+                                                <td colspan=""><h4>{{ansatt.stilling}}</h4></td>                                            
+                                            </tr>   
+                                            <tr>
+                                                <td><a href="mailto:{{ansatt.mail}}"><span class="glyphicon glyphicon-envelope" style="font-size:1.5em"></span></a></td>
+                                                <td>{{ansatt.mail}}</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="tel:{{ansatt.telefon}}"><span class="glyphicon glyphicon-earphone" style="font-size:1.5em"></span></a></td>
+                                                <td>{{ansatt.telefon}}</td>
+                                                <td></td>                                          
+                                            </tr>
+                                            -->
+                                            <!--
+                                            <tr>
+                                                <td>Mail</td>
+                                                <td>{{ansatt.mail}}</td>
+                                                <td><a href="mailto:{{ansatt.mail}}"><span class="glyphicon glyphicon-envelope" style="font-size:1.5em"></span></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Telefon</td>
+                                                <td>{{ansatt.telefon}}</td>
+                                                <td><a href="tel:{{ansatt.telefon}}"><span class="glyphicon glyphicon-earphone" style="font-size:1.5em"></span></a></td>                                          
+                                            </tr>
+                                            -->
+                                            <!--
+                                            <tr>
+                                                <td colspan="4"></td>
+                                            </tr>
+                                            -->
+                                            <!--
+                                            <tr>
+                                                <td colspan="4"><h2><span class="label label-info" >Kontor</span></h2></td>
+                                            </tr>
+                                            -->
+                                        </table>
+                                    </div>
+                                    <!--
+                                </div>
+                            </div>-->
+                        </div>
+                        <div class="panel-footer" style="font-size:0.8em"><strong>Rolle: </strong>{{ansatt.rolle}}</div>
+                    </div>
+                </div>
+           
+                <!-- ################################# -->
+                <!-- ##           REPEAT END        ## -->
+                <!-- ################################# -->
+            </div>
+        </div>
+    </div>    
+</div>

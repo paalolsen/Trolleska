@@ -1,0 +1,41 @@
+[
+    {	
+		"id": 1,
+		"bakgrunnsbilde": "1.png",
+		"infoboks": 
+			{
+				"tekst1" : "Trenger du elektriker?",
+				"tekst2" : "Vi i SEKO Elektro AS kan hjelpe deg med prosjektering og gjennomføring av nær sagt alle typer elektrikerarbeid fra enkle oppdrag i eneboliger til store totalentrepriser.",
+				"bilde1" : "",
+				"bilde2" : ""
+			}			
+		
+	}
+	,
+	{	
+		"id": 2,
+		"bakgrunnsbilde": "2.jpg",
+		"infoboks": 
+			{
+				"tekst1" : "Alle typer oppdrag:?",
+				"tekst2" : "Dersom du har planer om ny garasje eller nytt yrkesbygg, har vi medarbeidere som kan hjelpe deg gjennom hele prosessen, fra planleggingen til ferdig prosjektert og dokumentert bygg.",
+				"bilde1" : "",
+				"bilde2" : ""
+			}	
+		
+	}
+	,
+	{	
+		"id": 3,
+		"bakgrunnsbilde": "3.png",
+		"infoboks": 
+			{
+				"tekst1" : "",
+				"tekst2" : "Med 164 medlemsbedrifter og over 3000 ansatte er vi Norges største elektrikerkjede. Dette gjør at vi kan tilby våre kunder høy service hele landet rundt!",
+				"bilde1" : "ElProffen.gif",
+				"bilde2" : ""	
+			}	
+		
+	}
+	
+]

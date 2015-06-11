@@ -1,0 +1,36 @@
+#############################
+		VERSION 1
+#############################
+
+function processArray(arr, callback) {
+    var resultArr = new Array(); 
+    for (var i = arr.length-1; i >= 0; i--)
+        resultArr[i] = callback(arr[i]);
+    return resultArr;
+}
+
+var arr = [1, 2, 3, 4];
+var arrReturned = processArray(arr, function(arg) {return arg * -1;});
+// arrReturned would be [-1, -2, -3, -4]
+
+#############################
+		VERSION 2
+#############################
+
+###
+ OLD STYLE
+### 
+fileObject = open(file)
+# now that we have WAITED for the file to open, we can write to it
+fileObject.write("We are writing to the file.")
+# now we can continue doing the other, totally unrelated things our program does
+
+###
+	WITH CALLBACK
+###
+# we pass writeToFile (A CALLBACK FUNCTION!) to the open function
+fileObject = open(file, writeToFile)
+# execution continues flowing -- we don't wait for the file to be opened
+# ONCE the file is opened we write to it, but while we wait WE CAN DO OTHER THINGS!	
+
+

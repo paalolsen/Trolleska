@@ -1,0 +1,54 @@
+
+
+/* Top Navigation Bar */
+
+.navbar-fixed-top {
+ 
+  padding: 5px 0;
+
+}
+
+#elproffen.panel-heading  {
+    
+    background-color: #a20633!important; 
+    margin:0;
+    color:white;   
+}
+
+#elproffenBilde {
+   
+    height: 100%;
+  
+}
+#elproffenBilde img {
+
+    height: 400px;
+    width: 400px;
+}
+
+.panel-default {    
+    background-color: #710423;    
+    color:white;
+}
+
+
+.content_white {
+    text-align: center;
+}
+
+
+/*=========================
+  Footer
+ ================= */
+
+footer {
+	/*background-color: rgba(4, 128, 190, 0.4);*/  /*#0480be*/
+    background: #242424;
+    margin-top: 40px;
+	margin-bottom:-50px;
+	padding:7px;
+    text-align: center;
+    color: #7e7a7a;
+    font-size: 0.7em;
+}
+

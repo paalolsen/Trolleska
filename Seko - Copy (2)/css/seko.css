@@ -1,0 +1,213 @@
+.object-fit {
+  display: block;
+  object-fit: cover;
+}
+
+{
+  -webkit-backface-visibility: hidden;
+}
+
+body {
+        font-family: 'Droid Sans', sans-serif;
+        font-size: 14px;
+      }
+
+/* Top Navigation Bar */
+
+.navbar-fixed-top { 
+  padding: 5px 0;
+}
+
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 1px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 1px #ccc;
+  box-shadow:         3px 3px 5px 1px #ccc;
+}
+
+.shadow-bottom {
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
+}
+
+<!-- HACK for å få alle sub-menu items til å vise seg; uten denne blir det scroll-bar i menyen -->
+<!--.navbar-collapse.in {    overflow-y: visible;}-->
+.navbar-collapse.collapse.in { <display: block!important; overflow-y: visible !important;}
+
+#elproffen.panel-heading  {
+    
+    background-color: #a20633!important; 
+    margin:0;
+    color:white;   
+}
+
+#elproffenBilde {
+   
+    height: 100%;
+  
+}
+#elproffenBilde img {
+
+    height: 400px;
+    width: 400px;
+}
+
+.panel-default {    
+    background-color: #710423;    
+    color:white;
+}
+
+
+.content_white {
+    text-align: center;
+}
+
+.paddingFromMenu{
+    padding-top:60px;
+}
+
+.maxWidth {
+    width: 100%;
+}
+
+
+.textLeft {
+    text-align: left;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.texCenter {
+    text-align: center;
+}
+
+#headerBox{
+    float:left;
+    width:100%;
+    height:250px;
+    margin-top:0;
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 30px;
+    
+}
+.text-headerBox30{
+    float:right;    
+    background-color: #4679bd;
+    width:40%;
+    height:120px;
+    margin-top:0;
+    margin-left: 0;
+    margin-top: 100px;    
+    padding-right: 20px;
+    color: white;
+    font-size: 30px;
+}
+        
+
+/*=========================
+  Footer
+ ================= */
+
+    #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -55px;
+    }
+
+    /* Set the fixed height of the footer here */
+    #push,
+    #footer {
+        height: 55px;
+    }
+
+
+
+    #footer {
+      background: #242424;
+      text-align: center;
+      color: #7e7a7a;
+      align-items: center;    
+      padding-top: 10px;
+    <!--    
+      margin-top: 20px;
+    -->      
+      
+    }
+    #footer .socials {        
+        font-size: 200%;   
+        padding-left: 10px;       
+    }
+   
+    .panel-heading-nivaa1 {
+        background: #1663A2 !important;
+    }
+
+    .panel-heading-nivaa2 {
+        background: /*#E7914B*/ #A4B2B7 !important;
+    }
+
+    .panel-heading-nivaa3 {
+        background: /*#63A216*/ #3F98C6 !important;
+    }
+
+    #ansatteSmallTable table{
+        margin: 2px 2px 2px 2px;
+    }
+
+ 
+/* Lastly, apply responsive CSS fixes as necessary */
+/*
+  @media (max-width: 767px) {
+    #footer {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+*/
+<!--
+.box {
+    position: relative;
+    margin: 100px auto;
+    padding: 40px 20px 40px 20px;
+    width: 720px;
+}
+.box::before,
+.box::after {
+    content: "";
+    width: 710px;
+    height: 250px;
+    position: absolute;
+    left: -2px;
+    top: -5px;
+    z-index: -1;
+    -moz-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+.box::after {
+    left: 0;
+    -moz-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+}
+.box,
+.box::before,
+.box::after {
+    background: #ecf1fa;
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+-->
+.menuItemIndent li {
+    padding-left:30px;
+    
+}
+

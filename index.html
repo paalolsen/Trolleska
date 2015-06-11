@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test Med kodeforklaring</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/barnehageinfo_note.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+
+	<style>
+	
+		body{
+			margin:0;
+			padding:0;
+		}
+	
+        .defaultshape{
+            height: 80px;
+			width:  80px;				
+			margin-top: 20px;	
+            margin-right: 20px;
+            align: center;
+        }
+        
+		.square{
+            background-color: #F78181;
+		}
+        
+        .circle{
+            background-color: #F78181;
+            border-radius: 40px;
+        }
+        
+        .triangle {
+            width: 0; 
+	        height: 0; 
+	        border-left: 40px solid transparent;
+	        border-right: 40px solid transparent;
+	
+	        border-bottom: 80px solid #F7D358;
+        }
+        
+        .dropin {
+             background-color: #F78181;
+        }
+        
+        .container {
+            margin: 0 auto;
+            align: center;
+        }
+        
+        .floatLeft{
+            float: left;
+        }
+        
+        .clearFloat {
+            clear: both;
+        }
+	
+	</style>
+	
+</head>
+<body>
+
+    
+    
+	<div class="container">										<!--  Midtsiller alt slik at det holder seg der når man forminsker/forstørre vindu -->
+
+		<div class="square defaultshape floatLeft"></div>
+		<div class="circle defaultshape floatLeft"></div>
+		<div class="triangle defaultshape floatLeft"></div>
+        
+        <div id="dropin" class="square defaultshape floatLeft"></div>
+        
+        <div class="clearFloat"></div>
+        
+
+
+	</div>    
+    
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>    
+<script src="js/jquery.ui.touch-punch.min.js"></script>    
+<script src="js/bootstrap.min.js"></script>
+<script src="js/barnehageinfo_cookie.js"></script>    
+
+    
+<script>
+
+    
+    
+    $("#dropin").hide();    
+    $("#dropin").droppable({
+        drop: function(ui, event){
+           
+            //$(location).attr('href',"http://www.google.com"); 
+            var currentUrl = $(location).attr('href');
+                currentUrl = currentUrl.replace('index.html','');
+            var newUrl = currentUrl+'BarnehageInfo/index.html';
+            
+            setCookie("DevCookie", true);    
+            
+            alert('::' + newUrl);
+            
+            $(location).attr('href', newUrl); 
+        }
+    });
+    
+    
+    var colors = ["#F7D358", "#F79F81", "#819FF7", "#A9F5A9", "#F781F3"]; // Gul, Orange, blå, grønn, rosa    
+    
+	$(".square").click(function(){
+        $(".square").css("background-color",  getRandomColor(rgb2hex($(".square").css("background-color")).toUpperCase()));
+        
+    });
+    
+    $(".circle").click(function(){
+        $(".circle").css("background-color",  getRandomColor(rgb2hex($(".circle").css("background-color")).toUpperCase()));
+        
+    });
+    
+    $(".triangle").click(function(){
+        $(".triangle").css("border-bottom",  "80px solid " + getRandomColor(rgb2hex($(".triangle").css("border-bottom").replace('80px solid ', '')).toUpperCase()));
+        
+        checkForTheRightColor();
+        
+    });
+    
+    function getRandomColor(oldColor){
+        
+        var randomColor;
+        
+        while(true)
+        {
+            randomColor = Math.floor((Math.random() * 4) + 0);  
+            
+            if(oldColor != colors[randomColor])                
+                return colors[randomColor];
+        }             
+        
+    }
+    
+    function rgb2hex(rgb) {
+        rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
+        function hex(x) {
+            return ("0" + parseInt(x).toString(16)).slice(-2);
+        }
+        return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+    }
+    
+    function checkForTheRightColor(){
+             
+        var sqaureColor   = rgb2hex($(".square").css("background-color")).toUpperCase();        
+        var circleColor   = rgb2hex($(".circle").css("background-color")).toUpperCase();        
+        var triangleColor = rgb2hex($(".triangle").css("border-bottom").replace('80px solid ', '')).toUpperCase();
+                   
+        
+        if(sqaureColor == "#A9F5A9")
+        {            
+            if(circleColor == "#819FF7")
+            {
+                if(triangleColor == ("#F79F81"))
+                {                    
+                   $(".square").draggable();   
+                  $( "#dropin" ).fadeIn( "slow", function() {
+                    // Animation complete
+                  });
+                       
+                }
+            }   
+        }
+       
+        return;
+            
+    }
+
+</script>
+
+</body>
+</html>

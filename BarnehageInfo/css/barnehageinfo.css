@@ -1,0 +1,38 @@
+.spacingToMenu{    
+     margin-top: 100px;    
+}
+
+
+body {
+    margin: 0;
+    padding:0;
+}
+
+
+.topMenuItem {
+    list-style: none;
+    padding-right: 10px;
+}
+
+#topMenu{
+    margin:0 auto;
+}
+
+
+#infoText {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#topContainer {
+    background-image: url("../img/test1.jpg");    
+    width: 100%;                                /* Fjerner luft høyre+venstre*/
+    background-size: cover;                     /* Viser hele bildet på rammen, drar seg ikke utenfor*/
+    margin:0;
+    padding:0;
+}
+
+#topRow {
+    margin:100px 10px;
+    text-align: right;
+}

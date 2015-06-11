@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>BarnehageInfo</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+    
+    
+    
+
+    <style type="text/css">
+    
+        .top {
+            margin:0;
+            width: 100%;
+            height: 50px;
+            padding: 5px 5px 5px 5px;
+            background-color: deepskyblue;            
+           
+        }   
+        
+        .topBox {
+            margin: 0 auto;
+            background-color: lightblue;
+            height: 40px;
+            width: 100%;
+            border-radius: 20px;
+        }
+        
+    </style>
+    
+    
+    
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="topBox"></div>        
+    </div>
+    
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>    
+    <script src="js/jquery.ui.touch-punch.min.js"></script>      
+    
+    <script>
+        
+        $(".top").click(testFunc);
+        
+        function testFunc(){            
+            
+            var value = Math.floor(Math.random() * 2) + 1;
+            
+            if(value == 1) {
+                calculate(1, sayHi);            
+            }
+            else{
+                calculate(2, sayHo);
+            }            
+        }
+        
+        function calculate (value, callback) {
+            value = value * 10;
+            callback(value);
+        }
+        
+        function sayHi(value) {
+            alert('what dA fuges:' + value);
+        }
+        
+        function sayHo(value){
+            alert('aaaait: ' + value);
+        }
+        
+    </script>
+</body>
+    
+</html>

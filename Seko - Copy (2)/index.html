@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html ng-app="sekoApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Seko Elektro AS</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+    <link href="css/seko_recolor_bootstrap.css" rel="stylesheet">
+    <link href="css/seko_recolor_bootstrap_dropdown.css" rel="stylesheet">
+    <link href="css/seko.css" rel="stylesheet">
+    <link href="css/seko.box.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    
+    <!--<link href="css/carousel.css" rel="stylesheet">-->
+    
+    <!-- SPELLS -->
+    
+    <!-- JS: JQuery         --><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- JS: BOOTSTRAP      --><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <!-- JS: ANGULAR        --><script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <!-- JS: ANGULAR:ROUTE  --><script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <!-- JS: SEKO:ANGULAR   --><script src="app/sekoApp.js"></script>    
+    <!-- JS: SEKO           --><script src="js/seko.js"></script>    
+    
+
+    
+    <script type="text/javascript">
+            
+           
+                
+        $(document).ready(function(){
+            
+            $('#myCarousel2').on('slid.bs.carousel', function () {
+                console.log("The sliding transition of previous carousel item has been fully completed.");
+            });
+
+           
+            $(".nav a").click(function(){
+                $(".nav").find('.active').removeClass('active');
+                $(this).parent('li').toggleClass('active');            
+            });  
+                                
+            
+            function setBanners(tag){                 
+                $(tag).css({ 'color':'blue'});
+                alert( $(tag).length);
+            }
+            setBanners('.fa-facebook');
+            
+        });
+            
+            
+    </script>
+
+    
+    <style type="text/css">
+        
+        html, body, mainContent, carousel-inner { height: 100%; width: 100%; margin: 0; }
+        
+        footer {
+            width:100%;
+            position : absolute;
+            bottom : 0;
+            height : 40px;
+            margin-top : 40px;
+            }
+        
+        .doubleFont{
+            font-size: 4.0em
+        }
+        
+        .bs-example{
+            margin: 0x;     
+            
+        }
+       .bs-example h2{
+            margin: 0;     
+            color: #666;
+            padding-top: 90px;
+            font-size: 52px;
+            <!--font-family: "trebuchet ms", sans-serif;    -->
+        }
+        .bs-example .item{
+            background: #333;    
+            text-align: center;
+            height: 400px !important;
+        }
+        .bs-example .carousel{
+            margin-top: 0;
+        }
+        
+        .bs-example .maxWidth {
+            height: 100%;
+    
+        }
+        
+        
+        
+        .caption-textbox-blue{
+            background-color: /*#0480be*/rgba(4, 128, 190, 0.4);
+            border-radius: 3px;
+            max-width: 100%;      
+
+        }
+        
+        .caption-textbanner-black{
+            background-color: /*#0480be*/rgba(10, 10, 10, 0.6);            
+            color:white;
+            padding: 5px 5px 5px 5px;
+            text-align: center;
+        }
+        
+        .brand {
+            
+            /*background: url('img/seko.png') no-repeat left center;*/
+            width: 200px;                                
+            background-size: cover;                     /* Viser hele bildet på rammen, drar seg ikke utenfor*/
+            margin:0;
+            padding:15px 0 0 10px;           
+            
+        }
+        
+        #infoText {
+            font-weight: bold;
+            font-size: 1.1em;
+            
+        }
+  
+        #mainContent {        
+            margin-top:55px;
+            padding:0;
+            width:100%;
+            margin:0 auto;
+                /*border: 1px solid black;*/
+        }
+          
+        .hide-bullets {
+            list-style:none;
+            margin-left: -40px;
+            margin-top:20px;
+        }
+        
+        .carousel img .maxWidth{
+          /*position: absolute;
+          top: 0;
+          left: 0;
+          min-width: 400%;
+          min-height: 335px;*/
+            /*
+            max-width: 100%;
+width: auto;
+height: auto;
+vertical-align: middle;*/
+        }
+        
+        
+        
+        .feature_grid1 {
+        
+            padding: 40px 0 0 0;
+        }
+        
+        .feature_grid2 {
+        
+            padding-top: 30px;
+            
+            
+        }
+        
+        .feature_grid1 .feature_btn {
+            color: #bc5222;
+        }
+        
+        #feature .glyphicon{
+            /*
+            background-color: #4679bd;
+  border-color: #4072b4;
+            */
+            color: #4679bd;
+            font-size: 3em;
+            
+        }
+        
+        #ansatte img-circle {
+            width: 30%;
+              
+             box-shadow: 5px 5px 2.5px #888888;
+        }
+        
+        .ansattradwrapper{
+            background-color: #fff;
+            border-radius: 10px;
+            <!--box-shadow: 5px 5px 2.5px #888888;-->
+            margin: 90px 10px 0 10px;
+            <!--font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;-->
+           
+            
+        }
+        
+        .ansattHeader {
+            height: 50px;
+            background-color: #4679bd;
+        }
+        
+        .ansattLine {
+            margin-top: 30px; 
+            height: 5px;
+            background-color: #4679bd;
+            
+        }
+        
+        .ansattHeader img{
+            height: 50px;
+            background-color: #4679bd;
+            padding-left:20px;
+        }
+
+        
+        /* Karusell */
+        
+        #slides_control > div{
+          height: 200px;
+        }
+        #slides_control img{
+          margin:auto;
+          width: 400px;
+        }
+        #slides_control {
+          position:absolute;
+          width: 400px;
+          left:50%;
+          top:20px;
+         margin-left:-200px;
+        }
+        
+    </style>
+  
+    
+</head>
+
+<body>    
+    
+    
+<!-- ############################################## -->
+<!--                        MENU                    -->
+<!-- ############################################## -->
+    
+<!--
+    TIPS1:
+        Får å lukke collapsed meny ved klikk på item, må man ha på data-toggle="collapse" data-target=".navbar-collapse"
+-->
+    
+<div id="wrap">    
+    <div class="navbar navbar-default navbar-fixed-top shadow-bottom">
+        <div class="container">
+            <div class="navbar-header" >
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand brand">Seko <span id="infoText">Elektro</span> AS</a>    
+                
+            </div>
+            <div class="collapse navbar-collapse">
+                
+                <ul class="nav navbar-nav" >                               <!-- All in 1 line -->
+                    
+                    <li class="active"><a data-toggle="collapse" data-target=".navbar-collapse" href="#home">Hjem</a></li>      <!-- active = valgte -->      
+                    
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Privat<b class="caret"></b></a>
+                        <ul class="dropdown-menu"> 
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#skjemaerprivat">Skjemaer</a></li>  
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#byggebolig">Skal du bygge bolig? </a></li>                            
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#enoktips">ENØK tips</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Bedrift<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#skjemaerbedrift">Skjemaer</a></li>  
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#serviceavtaler">Serviceavtaler</a></li>                            
+                        </ul>
+                    </li>
+                    
+                   <li> <a data-toggle="collapse" data-target=".navbar-collapse" href="#referanser">Referanser</a></li>                    
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#autorisasjoner">Autorisasjoner</a></li>  
+                    
+                    <li class="dropdown" >
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Om Seko<b class="caret"></b></a>	
+                        <ul class="dropdown-menu menuItemIndent"    >
+                            <!--<li><a href="#ansatte">Ansatte i SEKO Elektro</a></li>-->
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#ansatte">Ansatte i SEKO Elektro</a></li>                                                                                  
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#kontaktoss">Kontakt oss</a></li>   
+                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#omseko">Om Seko</a></li>    
+                        </ul>
+                    </li>    
+                    
+                </ul>
+                </div>  
+        </div>    
+    </div>
+    
+<!-- ############################################## -->
+<!--                        VIEW                    -->
+<!-- ############################################## -->
+    
+    <div id="mainContent" class="container">         
+        <div ng-view>            
+    </div>
+
+    </div>
+
+<div id="push">
+    <div></div>
+</div>  
+<!-- ############################################## -->
+<!--            FOOTER                              -->
+<!-- ############################################## -->
+</div>
+    <div id="footer">
+      <div class="container" >
+        <div class="row">                              
+            <div class="col-md-12">                
+                <a href="https://www.facebook.com/SekoElektro?fref=ts" class="socials"><i class="fa fa-facebook"></i></a>
+                <a href="http://www.seko.no/#.VWxhYhhy0SA.twitter" class="socials"><i class="fa fa-twitter"></i></a>
+            </div>            
+        </div>
+<!--         <p>Seko Elektro AS 
+            <a href="#" class="socials"><i class=" fa fa-facebook-official"></i></a>
+            <a href="#" class="socials"><i class="fa fa-twitter-square"></i></a>
+          </p>          
+-->
+          
+      </div>
+    </div>
+    
+    <!--
+   	<footer>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+                        SEKO Elektro AS
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12"><p>Copyright &copy; 2015 Seko Elektro AS - by <a href="http://www.trolleska.com">Trolleska</a></p></div>
+				</div>
+			</div>
+		</section>
+	</footer>
+-->
+   
+    
+</body>
+    
+</html>

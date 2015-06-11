@@ -1,0 +1,101 @@
+<!-- ############################################## -->
+<!--            SEKO KARUSELL                       -->
+<!-- ############################################## -->
+
+<div class="bs-example" ng-controller="KarusellController">
+    <div id="myCarousel2" class="carousel slide" data-interval="3000" data-ride="carousel">
+    	<!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <!-- ################################# -->
+            <!-- ##           REPEAT START      ## -->
+            <!-- ################################# -->
+            <li data-target="#myCarousel2" data-slide-to="{$index}" ng-class="{active:!$index}" ng-repeat="slide in karusell"></li>
+            <!-- ################################# -->
+            <!-- ##           REPEAT END        ## -->
+            <!-- ################################# -->
+            
+            <!-- Statisk under, for prikkene
+                <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel2" data-slide-to="1"></li>
+                <li data-target="#myCarousel2" data-slide-to="2"></li>
+            -->            
+        </ol>   
+        <!-- Carousel items -->
+        <div class="carousel-inner">            
+                        
+            <!-- ################################# -->
+            <!-- ##           REPEAT START      ## -->
+            <!-- ################################# -->
+            <div class="item" style="background-image: url('img/{{slide.bakgrunnsbilde}}');height: 100%;background-size:cover;" ng-class="{active:!$index}" ng-repeat="slide in karusell">                       
+         		<div class="carousel-caption caption-textbox-blue" >
+                    <div style="width=20%">
+                        
+                        <!-- BILDE i HEADER -->
+                        <div ng-show="slide.infoboks.bilde1.length > 1">
+                             <img src="img/{{slide.infoboks.bilde1}}" height="19px" width="124px"   style="background-color:#a20633; padding:2px;">                            
+                        </div>
+                        
+                        <!-- TEKST i HEADER -->
+                        <h3 ng-show="slide.infoboks.tekst1.length > 1">{{slide.infoboks.tekst1}}</h3>
+                        
+                        <!-- TEKSTINNHOLD -->
+                        <p ng-show="slide.infoboks.tekst2.length > 1">      
+                            {{slide.infoboks.tekst2}}
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- ################################# -->
+            <!-- ##           REPEAT END      ## -->
+            <!-- ################################# -->            
+                       
+        </div>
+        <!-- Carousel nav -->
+        <span class="carousel-control left" href="#myCarousel2" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </span>
+        <span class="carousel-control right" href="#myCarousel2" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </span>
+    </div>
+</div>
+
+
+<!-- ############################################## -->
+<!--            VI LEVERER, BESTILL TIME +++        -->
+<!-- ############################################## -->
+
+<div class="featured_content" id="feature">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-3 feature_grid1"> 
+            <span class="glyphicon glyphicon glyphicon-time"></span>
+            <h3 class="m_1"><a href="#ansatte">Vi leverer</a></h3>
+            <p class="m_2">Vi ønsker å være en leverandør du kan stole på, og gjør vårt ypperste for å lever til avtalt tid og korrekt pris.</p>
+            <a href="#" class="feature_btn">Les mer</a> 
+      </div>
+        
+      <div class="col-md-3 feature_grid1"> 
+           <span class="glyphicon glyphicon glyphicon-home"></span>
+            <h3 class="m_1"><a href="#byggebolig">Bestill time for befaring</a></h3>
+            <p class="m_2">Har du hus, rekkehus eller et større prosjekt som du ønsker at en fagmann skal se på. Ta kontakt.</p>
+            <a href="#" class="feature_btn">Les mer</a> 
+        </div>
+        
+      <div class="col-md-3 feature_grid1"> 
+           <span class="glyphicon glyphicon glyphicon-book"></span>
+            <h3 class="m_1"><a href="#referanser">Referanser</a></h3>
+            <p class="m_2">Vi har i dag mange kunder som bruker oss fast på serviceavtaler samt små og store prosjekter.</p>          
+            <a href="#referanser" class="feature_btn">Les mer</a> 
+        </div>
+        
+      <div class="col-md-3 feature_grid1"> 
+           <span class="glyphicon glyphicon glyphicon-map-marker"></span>
+            <h3 class="m_1"><a href="#omseko">Om Seko</a></h3>
+            <p class="m_2">SEKO Elektro AS ble etablert i 1992 og holder i dag til egene lokaler på Skedsmokorset...</p>
+            <a href="#" class="feature_btn">Les mer</a> 
+        </div>
+    </div>
+  </div>
+</div> 

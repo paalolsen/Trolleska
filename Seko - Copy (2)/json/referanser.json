@@ -1,0 +1,100 @@
+﻿[
+    {	
+		"id": 1,
+		"emne": "Bedrift",
+		"sub_emne": "",
+		"firma": [
+				{ "navn": "Fet kommune"},
+				{ "navn": "Rælingen Kommune"},
+				{ "navn": "Heidenreich AS"},
+				{ "navn": "Entra Eiendom AS"},
+				{ "navn": "Akershus Grafisk Team AS"},
+				{ "navn": "Felleskjøpet Øst-Vest AS"},
+				{ "navn": "EnstoNor AS"},
+				{ "navn": "Transport sentralen Oslo A/L"},
+				{ "navn": "Transport sentralen Lillestrøm A/L"},
+				{ "navn": "Bring Solution"},
+				{ "navn": "DSV AS"},
+				{ "navn": "Caravan senteret AS"},
+				{ "navn": "Norasonde AS"},
+				{ "navn": "O. B. Wiik AS"},
+				{ "navn": "Rodin AS"},
+				{ "navn": "Aberia Helseresort AS (Rømskog Spa & Resort)"},
+				{ "navn": "Nammo Bakelittfabrikken AS"},
+				{ "navn": "Valvoline AS"}
+				
+			]				
+	},
+	{	
+		"id": 2,
+		"emne": "Entreprenører",
+		"sub_emne": "",
+		"firma": 
+			[
+				{ "navn": "SEBY AS"},
+				{ "navn": "Veidekke ASA"},
+				{ "navn": "Selvaag Bygg AS"},
+				{ "navn": "OKK AS"},
+				{ "navn": "Huurre Norway AS"},
+				{ "navn": "Bulk Eiendom AS"},
+				{ "navn": "Asker Entreprenør AS"},
+				{ "navn": "Realbygg AS"},
+				{ "navn": "Aune og Hovland AS"},
+				{ "navn": "Tronrud Entreprenør AS"},
+				{ "navn": "Gjerdrum Boliger AS"},
+				{ "navn": "Agathon Borgen AS"},
+				{ "navn": "Øie AS"}
+			]				
+	},	
+	{	
+		"id": 3,
+		"emne": "Byggmestere ",
+		"sub_emne": "(Eksempler)",
+		"firma": 
+			[
+				{ "navn": "Løvberg Bygg AS"},
+				{ "navn": "Nygård Bygg AS"},
+				{ "navn": "Solbrekken & Østlie AS"}
+			]
+	},
+	{	
+		"id": 4,
+		"emne": "Tidligere prosjekter",
+		"sub_emne": "(Eksempler)",
+		"firma": 
+			[
+				{ "navn": "Bring Berger, Skedsmokorset"},
+				{ "navn": "Zen Resort & Spa, Rømskog"},
+				{ "navn": "Bjørkelangen Torg, Bjørkelangen"},
+				{ "navn": "Linåkergården, Aurskog"},
+				{ "navn": "Fratelli, Lillestrøm"},
+				{ "navn": "Adidas, Lillestrøm"},
+				{ "navn": "Stataens Havarikommisjon for Transport, byggetrinn 3, Lilletsrøm"},
+				{ "navn": "Østersund Skole, Fetsund"},
+				{ "navn": "Gjellerås Skole, Skjetten"},
+				{ "navn": "Kjeller Skole, Kjeller"},
+				{ "navn": "Grenseveien 92, Oslo"},
+				{ "navn": "XXL, nytt sentrallager, Gardermoen"},
+				{ "navn": "Linnerud Leir, Undervisningsbygg, Oslo"},
+				{ "navn": "Østensjø Skole, Nybygg med gymsal, aktivitetsskole og 1.-2.klasse, Oslo"},
+				{ "navn": "Ahus, avd Rosenbergveien 15, Grorud"},
+				{ "navn": "Tryvann Vinterpark, ny varmestue HC og barneområde samt ny driftsbygning, Oslo"}					
+			]
+	},
+	{	
+		"id": 5,
+		"emne": "Pågående prosjekter",
+		"sub_emne": "(Eksempler)",
+		"firma": 
+			[
+				{ "navn": "Norsk Resirk, produksjonsanlegg på Heia i Fet."},
+				{ "navn": "Hammer Skole, ny ungdomskole, Lørenskog"},
+				{ "navn": "Nystulia, leiligheter, Gjerdrum"},
+				{ "navn": "Skattumlia, leiligheter, Flateby"},
+				{ "navn": "Kløvertunet, omsorgsleiligheter, Gjerdrum"},
+				{ "navn": "Nordkisa Skole, ny barneskole, Nordkisa (I samarbeid med Nordengen AS)"},
+				{ "navn": "NLP, produksjonsanlegg på Fugleåsen i Langhus"}					
+			]
+	}
+	
+]
