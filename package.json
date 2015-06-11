@@ -1,0 +1,17 @@
+{
+	"name" : "Trolleska",
+	"version" : "0.1.0",
+   "main": "TrolleskaNodeJS/Trolleska.js",
+	"dependencies" : {
+		"express" : "4.x",
+		"body-parser" : "~1.0.0",
+		"morgan" : "latest",
+		"mongoose" : "latest",
+		"jsonwebtoken" : "5.0.1"
+	},
+	"engines" : {
+		"node" : ">=0.10.0"
+	},
+	"explained" : "express for MVC, body-parser simulate request for test, morgan for request logging, mongoose for ORM MongoDB, jsonwebtokens for tokens"
+}
+

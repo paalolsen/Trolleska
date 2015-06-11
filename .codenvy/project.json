@@ -1,0 +1,1 @@
+{"mixinTypes":["contribution"],"builders":{"configs":{}},"runners":{"configs":{"system:/javascript/web/gulp":{"ram":1000,"variables":{},"options":{}}},"default":"system:/javascript/web/gulp"},"type":"AngularJS","attributes":{"language":["javascript"],"framework":["AngularJS"],"contribute_branch":["master"],"contribute_mode":["contribute"]}}
