@@ -1,4 +1,4 @@
-[
+﻿[
     {	
 		"id": 1,
 		"bakgrunnsbilde": "1.png",
@@ -14,7 +14,7 @@
 	,
 	{	
 		"id": 2,
-		"bakgrunnsbilde": "2.jpg",
+		"bakgrunnsbilde": "2.png",
 		"infoboks": 
 			{
 				"tekst1" : "Alle typer oppdrag:?",
