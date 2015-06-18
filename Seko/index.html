@@ -45,11 +45,30 @@
             });  
                                 
             
+            /* FOR Å SETTE  CSS PÅ ELEMENT/ATTRIBUTT OSV
             function setBanners(tag){                 
                 $(tag).css({ 'color':'blue'});
                 alert( $(tag).length);
             }
-            setBanners('.fa-facebook');
+            setBanners('#LALALALALAL');
+            */
+            
+            
+            function updateCSS(tag, field, val){
+               
+                alert('TEST OK?: ' + val);
+                $('#viewAutorisasjoner').css( 'color', 'blue');
+                $('#viewAutorisasjoner').text("hehehehe");
+                
+                //alert('LALAL' + $('#wrap div div').html());
+                alert($('#mainContent').html());
+            
+            };
+            
+            updateCSS('#mainContent #viewAutorisasjoner', 'color', 'blue');
+            // style="background-image: url('../img/dok-min.png');height: 250px ;background-size:cover;"
+            
+            
             
         });
             
@@ -243,121 +262,34 @@ vertical-align: middle;*/
 </head>
 
 <body>    
-    
-    
-<!-- ############################################## -->
-<!--                        MENU                    -->
-<!-- ############################################## -->
-    
-<!--
-    TIPS1:
-        Får å lukke collapsed meny ved klikk på item, må man ha på data-toggle="collapse" data-target=".navbar-collapse"
--->
-    
-<div id="wrap">    
-    <div class="navbar navbar-default navbar-fixed-top shadow-bottom">
-        <div class="container">
-            <div class="navbar-header" >
-                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand brand">Seko <span id="infoText">Elektro</span> AS</a>    
-                
-            </div>
-            <div class="collapse navbar-collapse">
-                
-                <ul class="nav navbar-nav" >                               <!-- All in 1 line -->
-                    
-                    <li class="active"><a data-toggle="collapse" data-target=".navbar-collapse" href="#home">Hjem</a></li>      <!-- active = valgte -->      
-                    
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Privat<b class="caret"></b></a>
-                        <ul class="dropdown-menu"> 
-                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#skjemaerprivat">Skjemaer</a></li>  
-                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#byggebolig">Skal du bygge bolig? </a></li>                            
-                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#enoktips">ENØK tips</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Bedrift<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#skjemaerbedrift">Skjemaer</a></li>  
-                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#serviceavtaler">Serviceavtaler</a></li>                            
-                        </ul>
-                    </li>
-                    
-                   <li> <a data-toggle="collapse" data-target=".navbar-collapse" href="#referanser">Referanser</a></li>                    
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#autorisasjoner">Autorisasjoner</a></li>  
-                    
-                    <li class="dropdown" >
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Om Seko<b class="caret"></b></a>	
-                        <ul class="dropdown-menu menuItemIndent"    >
-                            <!--<li><a href="#ansatte">Ansatte i SEKO Elektro</a></li>-->
-                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#ansatte">Ansatte i SEKO Elektro</a></li>                                                                                  
-                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#kontaktoss">Kontakt oss</a></li>   
-                            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#omseko">Om Seko</a></li>    
-                        </ul>
-                    </li>    
-                    
-                </ul>
-                </div>  
-        </div>    
-    </div>
-    
-<!-- ############################################## -->
-<!--                        VIEW                    -->
-<!-- ############################################## -->
-    
-    <div id="mainContent" class="container">         
-        <div ng-view>            
-    </div>
 
-    </div>
+    <div id="wrap">    
 
-<div id="push">
-    <div></div>
-</div>  
-<!-- ############################################## -->
-<!--            FOOTER                              -->
-<!-- ############################################## -->
-</div>
-    <div id="footer">
-      <div class="container" >
-        <div class="row">                              
-            <div class="col-md-12">                
-                <a href="https://www.facebook.com/SekoElektro?fref=ts" class="socials"><i class="fa fa-facebook"></i></a>
-                <a href="http://www.seko.no/#.VWxhYhhy0SA.twitter" class="socials"><i class="fa fa-twitter"></i></a>
-            </div>            
+        <!-- ############################################## -->
+        <!--                      MENU                      -->
+        <!-- ############################################## -->
+
+        <div ng-include="'/views/Partials/TopMenu.html'"></div>
+
+        <!-- ############################################## -->
+        <!--                      VIEW                      -->
+        <!-- ############################################## -->
+
+        <div id="mainContent" class="container">         
+            <div ng-view></div>
         </div>
-<!--         <p>Seko Elektro AS 
-            <a href="#" class="socials"><i class=" fa fa-facebook-official"></i></a>
-            <a href="#" class="socials"><i class="fa fa-twitter-square"></i></a>
-          </p>          
--->
-          
-      </div>
+        <!-- ############################################## -->
+        <!--                  MOVE TO BOTTOM                -->
+        <!-- ############################################## --> 
+        <div id="push">
+            <div></div>
+        </div>         
     </div>
-    
-    <!--
-   	<footer>
-		<section>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-                        SEKO Elektro AS
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12"><p>Copyright &copy; 2015 Seko Elektro AS - by <a href="http://www.trolleska.com">Trolleska</a></p></div>
-				</div>
-			</div>
-		</section>
-	</footer>
--->
-   
+        <!-- ############################################## -->
+        <!--                    FOOTER                      -->
+        <!-- ############################################## -->
+    <div ng-include="'/views/Partials/BottomBar.html'"></div>
+  
     
 </body>
     
